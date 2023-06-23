@@ -137,12 +137,13 @@ int main() //criação do menu
 		
 	setlocale(LC_ALL, "portuguese");
 	
-	printf("\t\tCartório da EBAC\t\n\n");   
-	printf("\tEscolha a opção desejada do menu:\n\n");
-	printf("\t\t1-Incluir nomes\n");
-	printf("\t\t2-consultar nomes\n");
-	printf("\t\t3-deletar usuários\n\n");
-	printf("\tUso exclusivo dos alunos EBAC\n\n");
+	printf("\t\Cartório da EBAC\t\n\n");   
+	printf("Escolha a opção desejada do menu:\n\n");
+	printf("\t1-Incluir nomes\n");
+	printf("\t2-consultar nomes\n");
+	printf("\t3-deletar usuários\n");
+	printf("\t4-Sair da aplicação\n\n");
+	printf("Uso exclusivo dos alunos EBAC\n\n");
 	printf("Opção:");
 	
 	scanf("%d", &opcao);
@@ -161,6 +162,11 @@ int main() //criação do menu
 			
 		case 3:
 			deletar();
+			break;
+			
+		case 4:
+			printf("Obrigado por utilizar o aplicativo!");
+			return 0;
 			break;
 		
 		default:
