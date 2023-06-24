@@ -93,7 +93,7 @@ int consultar()
 	}
 	
 	 	system("pause");
-	 	
+;	 	
 		}
 
 int deletar()
