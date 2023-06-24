@@ -165,7 +165,7 @@ int main() //criação do menu
 			break;
 			
 		case 4:
-			printf("Obrigado por utilizar o aplicativo!");
+			printf("Obrigado por ulitizar o site!");
 			return 0;
 			break;
 		
