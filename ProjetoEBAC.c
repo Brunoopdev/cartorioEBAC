@@ -103,10 +103,9 @@ int deletar()
 	printf("Digite o CPF do usuário a ser deletado:  ");
 	scanf("%s",cpf);
 	
-	remove(cpf);
-	
 	FILE *file;
 	file = fopen(cpf,"r");
+	fclose(file);
 
 	
 	if(file == NULL)
@@ -114,12 +113,12 @@ int deletar()
 		printf("O usuário não foi encontrado!\n");
 	}
 	
-
 	if(file != NULL)
 	{
 		printf("O usuário foi excluido com sucesso!\n");
 	}
 	
+	remove(cpf);
 	system("pause");
 }
 
@@ -128,8 +127,33 @@ int main() //criação do menu
 { 
 	int opcao=0;
 	
-	int x=0;
+	int x=1;
 	
+	
+	for(x=1;x=1;)
+	{
+		system("cls");
+		
+		setlocale(LC_ALL, "portuguese");
+		
+		char senhalogin[10] = "a";
+		char nomelogin[10] = "a";
+		int comparacao;
+		
+		printf("_Cartório da EBAC_\n\n");
+		printf("Login de administrador!\n\n");
+		printf("Digite seu login:");
+			scanf("%s", nomelogin);
+		printf("Digite sua senha: ");
+			scanf("%s",senhalogin);
+			
+			comparacao = strcmp(nomelogin,"admin");
+			comparacao = strcmp(senhalogin,"123admin");
+			
+			if(comparacao == 0 )
+			{
+				system("cls");
+				
 	for(x=1;x=1;)
 	{
 		
@@ -137,7 +161,7 @@ int main() //criação do menu
 		
 	setlocale(LC_ALL, "portuguese");
 	
-	printf("\t\Cartório da EBAC\t\n\n");   
+	printf("\tCartório da EBAC\t\n\n");   
 	printf("Escolha a opção desejada do menu:\n\n");
 	printf("\t1-Incluir nomes\n");
 	printf("\t2-consultar nomes\n");
@@ -174,7 +198,12 @@ int main() //criação do menu
 		    system("pause");
 			break;	
 				
+		}
 	}
-	
+}
+
+	else
+		printf("\nInformações incorretas!\n\n");
+		system("pause");
 }
 }
